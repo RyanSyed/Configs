@@ -8,8 +8,23 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+
+" filesearch plugin
 Plugin 'kien/ctrlp.vim'
+
+" undo tree traverse plugin
 Plugin 'sjl/gundo.vim'
+
+" fancy-ass C/C++ helper functions
+Plugin 'LucHermitte/lh-vim-lib'
+Plugin 'LucHermitte/lh-tags'
+Plugin 'LucHermitte/lh-dev'
+Plugin 'LucHermitte/lh-brackets'
+Plugin 'LucHermitte/searchInRuntime'
+Plugin 'LucHermitte/mu-template'
+Plugin 'tomtom/stakeholders_vim'
+Plugin 'LucHermitte/alternate-lite'
+Plugin 'LucHermitte/lh-cpp'
 
 call vundle#end()
 filetype plugin indent on
@@ -35,6 +50,9 @@ set showmatch
 set incsearch
 set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
+
+" Bracket copmletion
+
 
 " folding options
 set foldenable
