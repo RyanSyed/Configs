@@ -16,20 +16,22 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
 
 " fancy-ass C/C++ helper functions
-Plugin 'LucHermitte/lh-vim-lib'
-Plugin 'LucHermitte/lh-tags'
-Plugin 'LucHermitte/lh-dev'
-Plugin 'LucHermitte/lh-brackets'
-Plugin 'LucHermitte/searchInRuntime'
-Plugin 'LucHermitte/mu-template'
-Plugin 'tomtom/stakeholders_vim'
-Plugin 'LucHermitte/alternate-lite'
-Plugin 'LucHermitte/lh-cpp'
+" Plugin 'LucHermitte/lh-vim-lib'
+" Plugin 'LucHermitte/lh-tags'
+" Plugin 'LucHermitte/lh-dev'
+" Plugin 'LucHermitte/lh-brackets'
+" Plugin 'LucHermitte/searchInRuntime'
+" Plugin 'LucHermitte/mu-template'
+" Plugin 'tomtom/stakeholders_vim'
+" Plugin 'LucHermitte/alternate-lite'
+" Plugin 'LucHermitte/lh-cpp'
 
 call vundle#end()
 filetype plugin indent on
 
 syntax enable
+
+set backspace=indent,eol,start
 
 " Tab options
 set shiftwidth=4
@@ -51,8 +53,8 @@ set incsearch
 set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
 
-" Bracket copmletion
-
+" YCM Config Options
+let g:ycm_confirm_extra_conf = 0
 
 " folding options
 set foldenable
