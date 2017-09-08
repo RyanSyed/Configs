@@ -1,6 +1,6 @@
 # Plugin Install Instructions
 ## To install Vundle
-1. git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
+1. git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ## To install YouCompleteMe with semantic support for C-family languages:
 1. sudo apt-get install build-essential cmake
