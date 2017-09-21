@@ -6,14 +6,22 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+
+" C Semantic Completion and Linter
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+
+" Saving and Restoring Vim sessions
+Plugin 'tpope/vim-obsession'
 
 " filesearch plugin
 Plugin 'kien/ctrlp.vim'
 
 " undo tree traverse plugin
 Plugin 'sjl/gundo.vim'
+
+" Seamless transition from vim to tmux panes
+Plugin 'christoomey/vim-tmux-navigator'
 
 " fancy-ass C/C++ helper functions
 " Plugin 'LucHermitte/lh-vim-lib'
@@ -53,8 +61,23 @@ set incsearch
 set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
 
+" Toggle paste mode
+set pastetoggle=<leader>p
+
 " YCM Config Options
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+" vim-tmux navigator options
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <M-Left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-Down> :TmuxNavigateDown<cr>
+nnoremap <silent> <M-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-Right> :TmuxNavigateRight<cr>
+nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
+
+" bracket completion
+inoremap {<CR> {<CR>}<Esc>ko
 
 " folding options
 set foldenable
@@ -83,7 +106,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 augroup configgroup
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
-    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
+    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.c,*.h
                 \:call <SID>StripTrailingWhitespaces()
     autocmd FileType java setlocal noexpandtab
     autocmd FileType java setlocal list
