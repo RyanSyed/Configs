@@ -5,9 +5,17 @@
 ## To install YouCompleteMe with semantic support for C-family languages:
 1. sudo apt-get install build-essential cmake
 2. sudo apt-get install python-dev python3-dev
-3. cd ~/.vim/bundle/YouCompleteMe
-4. ./install.py --clang-completer
-5. Run :PluginInstall to install new plugins
+3. Open vim, type :PluginInstall from command mode, wait for completion, then exit vim
+4. cd ~/.vim/bundle/YouCompleteMe
+5. ./install.py --clang-completer
+6. Within your project, open vim and run :YcmGenerateConfig to read the makefile and configure You Complete Me
+
+# Tmux setup instructions
+1. git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+2. Tmux ressurect can get a bit annoying, if you want, remove the line at the bottom of .tmux.conf
+3. If you're not using a laptop, you can remove the tmux-battery plugin and the corresponding entries in the 'set -g status-right' line
+4. Run Tmux
+5. Type Ctrl+a then shift+I
 
 # How to use CtrlP
 ## Basic Usage
