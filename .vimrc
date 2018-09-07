@@ -8,17 +8,17 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " C Semantic Completion and Linter
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rdnetto/YCM-Generator'
 
 " Saving and Restoring Vim sessions
-Plugin 'tpope/vim-obsession'
+"Plugin 'tpope/vim-obsession'
 
 " filesearch plugin
-Plugin 'kien/ctrlp.vim'
+"Plugin 'kien/ctrlp.vim'
 
 " undo tree traverse plugin
-Plugin 'sjl/gundo.vim'
+"Plugin 'sjl/gundo.vim'
 
 " Seamless transition from vim to tmux panes
 Plugin 'christoomey/vim-tmux-navigator'
