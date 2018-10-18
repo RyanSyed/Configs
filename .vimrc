@@ -21,7 +21,9 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'sjl/gundo.vim'
 
 " Seamless transition from vim to tmux panes
-Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'christoomey/vim-tmux-navigator'
+
+Plugin 'vhda/verilog_systemverilog.vim'
 
 " fancy-ass C/C++ helper functions
 " Plugin 'LucHermitte/lh-vim-lib'
@@ -65,6 +67,11 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Toggle paste mode
 set pastetoggle=<leader>p
 
+" Copy/paste to clipboard
+noremap y "*y
+noremap x "*x
+noremap p "*p
+
 " YCM Config Options
 "let g:ycm_confirm_extra_conf = 0
 "let g:ycm_autoclose_preview_window_after_completion = 1
@@ -107,7 +114,7 @@ noremap k gk
 augroup configgroup
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
-    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.c,*.h :call <SID>StripTrailingWhitespaces()
+    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.c,*.h,*.v :call <SID>StripTrailingWhitespaces()
     autocmd FileType java setlocal noexpandtab
     autocmd FileType java setlocal list
     autocmd FileType java setlocal listchars=tab:+\ ,eol:-
